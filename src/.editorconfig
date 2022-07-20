@@ -1,0 +1,13 @@
+﻿[*.cs]
+
+# IDE0053: Use expression body for lambda expressions
+dotnet_diagnostic.IDE0053.severity = suggestion
+
+# IDE0060: Remove unused parameter
+dotnet_diagnostic.IDE0060.severity = suggestion
+
+# IDE0150: Prefer 'null' check over type check
+dotnet_diagnostic.IDE0150.severity = suggestion
+
+# CS8602: Dereference of a possibly null reference.
+dotnet_diagnostic.CS8602.severity = suggestion
