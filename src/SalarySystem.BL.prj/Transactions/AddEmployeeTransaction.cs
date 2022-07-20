@@ -1,10 +1,6 @@
 ﻿using SalarySystem.Database;
 using SalarySystem.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SalarySystem.BL;
 
@@ -20,8 +16,8 @@ public abstract class AddEmployeeTransaction : ITransaction
 		if(string.IsNullOrEmpty(address)) throw new ArgumentException($"'{nameof(address)}' cannot be null or empty.", nameof(address));
 
 		_employeeId = employeeId;
-		_name = name;
-		_address = address;
+		_name       = name;
+		_address    = address;
 	}
 
 	protected abstract PaymentClassification MakeClassification();
@@ -30,8 +26,8 @@ public abstract class AddEmployeeTransaction : ITransaction
 	public void Execute()
 	{
 		var paymentClassification = MakeClassification();
-		var paymentSchedule = MakeSchedule();
-		var paymentMethod = new HoldMethod();
+		var paymentSchedule       = MakeSchedule();
+		var paymentMethod         = new HoldMethod();
 
 		var employee = new Employee(_employeeId, _name, _address, paymentClassification, paymentSchedule, paymentMethod);
 		PayrollDatabase.AddEmployee(_employeeId, employee);

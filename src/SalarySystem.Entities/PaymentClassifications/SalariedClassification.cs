@@ -1,6 +1,4 @@
-﻿using SalarySystem.Entities;
-
-namespace SalarySystem.Entities;
+﻿namespace SalarySystem.Entities;
 
 public class SalariedClassification : PaymentClassification
 {

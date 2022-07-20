@@ -6,7 +6,7 @@ using SalarySystem.Entities;
 namespace SalarySysten.BL.Tests;
 
 [TestFixture]
-class SalariedEmployee
+internal class SalariedEmployee
 {
 	[Test]
 	public void AddSalariedEmployeeTransactionTest()
