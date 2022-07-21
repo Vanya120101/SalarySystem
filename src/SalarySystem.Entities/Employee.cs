@@ -21,4 +21,5 @@ public class Employee
 	public PaymentClassification PaymentClassification { get; }
 	public PaymentSchedule PaymentSchedule { get; }
 	public HoldMethod PaymentMethod { get; }
+	public Affiliation? Affiliation { get; set; }
 }
