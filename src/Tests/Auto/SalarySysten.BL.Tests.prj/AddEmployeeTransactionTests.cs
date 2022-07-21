@@ -6,14 +6,14 @@ using SalarySystem.Entities;
 namespace SalarySysten.BL.Tests;
 
 [TestFixture]
-internal class SalariedEmployee
+internal class AddEmployeeTransactionTests
 {
 	[Test]
 	public void AddSalariedEmployeeTransactionTest()
 	{
 		//Arrange
 		var employeeId = 1;
-		var addEmployeeTransaction = new AddSalariedEmployeeTransaction(employeeId, "Bob", "Home", 1000.00);
+		var addEmployeeTransaction = new SalarySystem.BL.AddSalariedEmployeeTransaction(employeeId, "Bob", "Home", 1000.00);
 
 		//Act
 		addEmployeeTransaction.Execute();

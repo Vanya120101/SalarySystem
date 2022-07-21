@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DB48C018
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auto", "Auto", "{9D46094C-2407-4605-A5C6-8B5DE982F206}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalarySysten.BL.Tests", "Tests\Auto\SalarySysten.BL.Tests.prj\SalarySysten.BL.Tests.csproj", "{33BA112F-0E24-41AF-A3F2-C758C54AB358}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalarySystem.BL.Tests", "Tests\Auto\SalarySysten.BL.Tests.prj\SalarySystem.BL.Tests.csproj", "{33BA112F-0E24-41AF-A3F2-C758C54AB358}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalarySystem.BL", "SalarySystem.BL.prj\SalarySystem.BL.csproj", "{122BFF90-FE62-4D96-B1DD-4FDFAB4D4EB8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalarySystem.Database", "SalarySystem.Database\SalarySystem.Database.csproj", "{5444AD24-F50F-4911-843C-09A3E65A16DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalarySystem.Entities", "SalarySystem.Entities\SalarySystem.Entities.csproj", "{5C13C9BE-FBA0-452B-A437-9326F7498A6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalarySystem.Entities", "SalarySystem.Entities\SalarySystem.Entities.csproj", "{5C13C9BE-FBA0-452B-A437-9326F7498A6A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB1745F1-F41B-4E6C-8D65-39FC90DF6460}"
 	ProjectSection(SolutionItems) = preProject
