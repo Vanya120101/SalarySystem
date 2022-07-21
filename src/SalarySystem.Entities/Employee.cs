@@ -16,10 +16,10 @@ public class Employee
 	}
 
 	public int EmployeeId { get; }
-	public string Name { get; }
-	public string Address { get; }
-	public PaymentClassification PaymentClassification { get; }
-	public PaymentSchedule PaymentSchedule { get; }
-	public HoldMethod PaymentMethod { get; }
+	public string Name { get; set; }
+	public string Address { get; set; }
+	public PaymentClassification PaymentClassification { get; set; }
+	public PaymentSchedule PaymentSchedule { get; set; }
+	public HoldMethod PaymentMethod { get; set; }
 	public Affiliation? Affiliation { get; set; }
 }
