@@ -1,6 +1,6 @@
 ﻿namespace SalarySystem.Entities;
 
-public class HoldMethod
+public class HoldMethod : PaymentMethod
 {
 	public HoldMethod()
 	{

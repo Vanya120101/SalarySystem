@@ -2,7 +2,7 @@
 
 public class Employee
 {
-	public Employee(int employeeId, string name, string address, PaymentClassification paymentClassification, PaymentSchedule paymentSchedule, HoldMethod paymentMethod)
+	public Employee(int employeeId, string name, string address, PaymentClassification paymentClassification, PaymentSchedule paymentSchedule, PaymentMethod paymentMethod)
 	{
 		if(string.IsNullOrEmpty(name)) throw new System.ArgumentException($"'{nameof(name)}' cannot be null or empty.", nameof(name));
 		if(string.IsNullOrEmpty(address)) throw new System.ArgumentException($"'{nameof(address)}' cannot be null or empty.", nameof(address));
@@ -20,6 +20,6 @@ public class Employee
 	public string Address { get; set; }
 	public PaymentClassification PaymentClassification { get; set; }
 	public PaymentSchedule PaymentSchedule { get; set; }
-	public HoldMethod PaymentMethod { get; set; }
+	public PaymentMethod PaymentMethod { get; set; }
 	public Affiliation? Affiliation { get; set; }
 }
