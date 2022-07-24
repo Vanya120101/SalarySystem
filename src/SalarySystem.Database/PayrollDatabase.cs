@@ -14,4 +14,5 @@ public class PayrollDatabase
 	public static void DeleteEmployee(int id) => _employees.Remove(id);
 	public static Employee? GetUniounMember(int memberId) => _unionMembers[memberId] as Employee;
 	public static void AddUnionMember(int memberId, Employee employee) => _unionMembers[memberId] = employee;
+	public static void DeleteUnionMember(int memberId) => _unionMembers.Remove(memberId);
 }

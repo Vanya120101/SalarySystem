@@ -21,9 +21,9 @@ internal class ServiceChargeTests
 		addHourlyEmployeeTransaction.Execute();
 		var employee = PayrollDatabase.GetEmployee(employeeId);
 
-		var unionAffiliation = new UnionAffiliation();
-		employee.Affiliation = unionAffiliation;
 		var memderId = 86;
+		var unionAffiliation = new UnionAffiliation(memderId, 99.4);
+		employee.Affiliation = unionAffiliation;
 		PayrollDatabase.AddUnionMember(memderId, employee);
 
 		var serviceChargeTransaction = new ServiceChargeTransaction(memderId, new DateTime(2005, 8,8), 12.95);
