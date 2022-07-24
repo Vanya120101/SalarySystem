@@ -1,6 +1,6 @@
 ﻿namespace SalarySystem.Entities;
 
-public class PaymentMethod
+public abstract class PaymentMethod
 {
-
+	public abstract void Pay(Paycheck paycheck);
 }

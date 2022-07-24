@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using SalarySystem.BL;
 using SalarySystem.Database;
 
-namespace SalarySysten.BL.Tests;
+namespace SalarySystem.BL.Tests;
 
 [TestFixture]
 internal class DeleteEmployeeTransactionTests

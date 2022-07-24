@@ -1,5 +1,6 @@
 ﻿namespace SalarySystem.Entities;
 
-public class PaymentSchedule
+public abstract class PaymentSchedule
 {
+	public abstract bool IsPayDate(DateTime payDate);
 }

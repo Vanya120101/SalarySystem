@@ -3,7 +3,7 @@ using SalarySystem.BL;
 using SalarySystem.Database;
 using SalarySystem.Entities;
 
-namespace SalarySysten.BL.Tests;
+namespace SalarySystem.BL.Tests;
 
 [TestFixture]
 internal class AddEmployeeTransactionTests

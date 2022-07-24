@@ -7,7 +7,7 @@ public class Employee
 		if(string.IsNullOrEmpty(name)) throw new System.ArgumentException($"'{nameof(name)}' cannot be null or empty.", nameof(name));
 		if(string.IsNullOrEmpty(address)) throw new System.ArgumentException($"'{nameof(address)}' cannot be null or empty.", nameof(address));
 
-		EmployeeId = employeeId;
+		Id = employeeId;
 		Name = name;
 		Address = address;
 		PaymentClassification = paymentClassification ?? throw new System.ArgumentNullException(nameof(paymentClassification));
@@ -15,7 +15,17 @@ public class Employee
 		PaymentMethod = paymentMethod ?? throw new System.ArgumentNullException(nameof(paymentMethod));
 	}
 
-	public int EmployeeId { get; }
+	public void PayDay(Paycheck paycheck)
+	{
+		var grossPay = PaymentClassification.CalculatePay(paycheck);
+		paycheck.GrossPay = grossPay;
+		var deductions = Affiliation?.CalculateDeductions(paycheck);
+		paycheck.Deductions = deductions ?? 0;
+		paycheck.NetPay = paycheck.GrossPay - paycheck.Deductions;
+		PaymentMethod.Pay(paycheck);
+	}
+
+	public int Id { get; }
 	public string Name { get; set; }
 	public string Address { get; set; }
 	public PaymentClassification PaymentClassification { get; set; }

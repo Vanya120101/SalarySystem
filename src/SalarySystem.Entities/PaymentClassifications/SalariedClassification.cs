@@ -8,4 +8,6 @@ public class SalariedClassification : PaymentClassification
 	{
 		Salary = salary;
 	}
+
+	public override double CalculatePay(Paycheck paycheck) => Salary;
 }

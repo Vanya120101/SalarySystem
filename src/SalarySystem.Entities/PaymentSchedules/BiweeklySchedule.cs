@@ -2,5 +2,5 @@
 
 public class BiweeklySchedule : PaymentSchedule
 {
-
+	public override bool IsPayDate(DateTime payDate) => true;
 }

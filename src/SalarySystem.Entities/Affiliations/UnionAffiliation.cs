@@ -16,4 +16,5 @@ public class UnionAffiliation : Affiliation
 
 	public void AddServiceCharge(ServiceCharge serviceCharge) => _serviceCharges.Add(serviceCharge);
 	public ServiceCharge? GetServiceCharge(DateTime date) => _serviceCharges.FirstOrDefault(c=>c.Date == date);
+	public override double CalculateDeductions(Paycheck paycheck) => Due;
 }

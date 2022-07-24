@@ -15,4 +15,14 @@ public class PayrollDatabase
 	public static Employee? GetUniounMember(int memberId) => _unionMembers[memberId] as Employee;
 	public static void AddUnionMember(int memberId, Employee employee) => _unionMembers[memberId] = employee;
 	public static void DeleteUnionMember(int memberId) => _unionMembers.Remove(memberId);
+	public static IEnumerable<Employee> GetEmployees()
+	{
+		var employees = new List<Employee>();
+		foreach (var employee in _employees.Values)
+		{
+			employees.Add((Employee)employee);
+		}
+
+		return employees;
+	}
 }

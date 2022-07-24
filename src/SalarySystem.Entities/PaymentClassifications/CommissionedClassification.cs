@@ -16,4 +16,5 @@ public class CommissionedClassification : PaymentClassification
 	public void AddSalesReceipt(SalesReceipt salesReceipt) => _salesReceiptList.Add(salesReceipt);
 
 	public SalesReceipt? GetSalesReceipt(DateTime dateTime) => _salesReceiptList.FirstOrDefault(r=>r.Date == dateTime);
+	public override double CalculatePay(Paycheck paycheck) => 0;
 }
