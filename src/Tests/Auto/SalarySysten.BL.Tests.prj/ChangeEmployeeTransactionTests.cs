@@ -1,12 +1,5 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SalarySystem.BL;
 using SalarySystem.Database;
-using SalarySystem.Entities;
 
 namespace SalarySystem.BL.Tests;
 

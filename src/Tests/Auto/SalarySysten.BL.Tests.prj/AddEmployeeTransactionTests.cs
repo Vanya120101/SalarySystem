@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using SalarySystem.BL;
 using SalarySystem.Database;
 using SalarySystem.Entities;
 

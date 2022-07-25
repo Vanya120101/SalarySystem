@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace SalarySystem.Entities;
+﻿namespace SalarySystem.Entities;
 
 public class MailMethod : PaymentMethod
 {
