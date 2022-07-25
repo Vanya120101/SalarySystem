@@ -10,5 +10,5 @@ public class MonthlySchedule : PaymentSchedule
 	}
 
 	public override bool IsPayDate(DateTime payDate) => IsLastDayOfMonth(payDate);
-
+	public override DateTime GetPayPeriodStartDay(DateTime payDate) => new DateTime(payDate.Year, payDate.Month, 1);
 }

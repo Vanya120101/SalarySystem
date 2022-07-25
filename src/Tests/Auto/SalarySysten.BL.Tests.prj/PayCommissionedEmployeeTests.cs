@@ -112,7 +112,6 @@ internal class PayCommissionedEmployeeTests
 		Assert.That(paycheck, Is.Null);
 	}
 
-
 	private void ValidateCommissionedPaycheck(PaydayTransaction transaction, int employeeId, DateTime payDate, double pay)
 	{
 		var paycheck = transaction.GetPaycheck(employeeId);

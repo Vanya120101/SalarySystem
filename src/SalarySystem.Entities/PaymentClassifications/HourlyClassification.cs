@@ -18,18 +18,11 @@ public class HourlyClassification : PaymentClassification
 		var totalPay = 0.0;
 		foreach(var timeCard in _timeCards)
 		{
-			if(IsInPayPeriod(timeCard, paycheck.PayDay))
+			if(DateUtil.IsDayInPeriod(timeCard.Date, paycheck.StartDate, paycheck.PayDay))
 				totalPay += CalculatePayForTimeCard(timeCard);
 		}
 
 		return totalPay;
-	}
-
-	private bool IsInPayPeriod(TimeCard card, DateTime payPeriod)
-	{
-		var payPeroidEndTime = payPeriod;
-		var payPeriodStartTime = payPeriod.AddDays(-5);
-		return card.Date <= payPeroidEndTime && card.Date >= payPeriodStartTime;
 	}
 
 	private double CalculatePayForTimeCard(TimeCard timeCard)

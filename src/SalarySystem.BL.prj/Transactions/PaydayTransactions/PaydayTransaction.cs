@@ -25,7 +25,8 @@ public class PaydayTransaction : ITransaction
 		{
 			if(employee.PaymentSchedule.IsPayDate(_payDate))
 			{
-				var paycheck = new Paycheck(_payDate);
+				var startDate = employee.PaymentSchedule.GetPayPeriodStartDay(_payDate);
+				var paycheck = new Paycheck(startDate,_payDate);
 				_payckecks.Add(employee.Id, paycheck);
 				employee.PayDay(paycheck);
 			}

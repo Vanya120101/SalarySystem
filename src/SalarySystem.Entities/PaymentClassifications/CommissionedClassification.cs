@@ -21,18 +21,10 @@ public class CommissionedClassification : PaymentClassification
 		var totalPay = Salary;
 		foreach(var salesReceipt in _salesReceiptList)
 		{
-			if(IsInDayPeriod(paycheck.PayDay, salesReceipt))
+			if(DateUtil.IsDayInPeriod(salesReceipt.Date, paycheck.StartDate, paycheck.PayDay))
 				totalPay += salesReceipt.Amount * CommissionedRate;
 		}
 
 		return totalPay;
-	}
-
-	private bool IsInDayPeriod(DateTime payDay, SalesReceipt salesReceipt)
-	{
-		var payPeroidEndTime = payDay;
-		var payPeriodStartTime = payDay.AddDays(-14);
-
-		return salesReceipt.Date <= payPeroidEndTime && salesReceipt.Date >= payPeriodStartTime;
 	}
 }

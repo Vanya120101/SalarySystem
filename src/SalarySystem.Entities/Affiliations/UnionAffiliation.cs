@@ -16,5 +16,18 @@ public class UnionAffiliation : Affiliation
 
 	public void AddServiceCharge(ServiceCharge serviceCharge) => _serviceCharges.Add(serviceCharge);
 	public ServiceCharge? GetServiceCharge(DateTime date) => _serviceCharges.FirstOrDefault(c=>c.Date == date);
-	public override double CalculateDeductions(Paycheck paycheck) => Due;
+	public override double CalculateDeductions(Paycheck paycheck)
+	{
+		var totalDue = 0.0;
+		var fridays = DateUtil.NumberOfFridaysInPayPeriod(paycheck.StartDate, paycheck.PayDay);
+		totalDue = Due * fridays;
+
+		foreach(var serviceCharge in _serviceCharges)
+		{
+			if(DateUtil.IsDayInPeriod(serviceCharge.Date, paycheck.StartDate, paycheck.PayDay))
+				totalDue += serviceCharge.Amount;
+		}
+
+		return totalDue;
+	}
 }
