@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace SalarySystem.WebService;
 
@@ -13,15 +16,22 @@ public class Startup
 	public void ConfigureServices(IServiceCollection services)
 	{
 		services.AddMvc();
+		services.AddSwaggerGen(options =>
+		{
+			var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+			options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+		});
 	}
 
-	// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 	public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 	{
 		if(env.IsDevelopment())
 		{
 			app.UseDeveloperExceptionPage();
+			app.UseSwagger();
+			app.UseSwaggerUI();
 		}
+
 		app.UseStaticFiles();
 		app.UseRouting();
 
