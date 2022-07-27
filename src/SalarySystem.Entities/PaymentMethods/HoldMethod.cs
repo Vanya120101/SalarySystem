@@ -9,4 +9,6 @@ public class HoldMethod : PaymentMethod
 	{
 
 	}
+	public override string ToString() => "Выплата осуществляется на руки";
+
 }

@@ -7,6 +7,16 @@ public class PayrollDatabase
 {
 	private static readonly Hashtable _employees = new Hashtable();
 	private static readonly Hashtable _unionMembers = new Hashtable();
+
+	static PayrollDatabase()
+	{
+		var random = new Random();
+		for(var i = 0; i < 50; i++)
+		{
+			var employee = new Employee(random.Next(0, int.MaxValue), "Vanya" + i, "Lenina", new SalariedClassification(150.00), new MonthlySchedule(), new HoldMethod());
+			_employees[employee.Id] = employee;
+		}
+	}
 	public static void AddEmployee(int id, Employee employee) => _employees[id] = employee;
 
 	public static Employee? GetEmployee(int id) => _employees[id] as Employee;
@@ -18,7 +28,7 @@ public class PayrollDatabase
 	public static IEnumerable<Employee> GetEmployees()
 	{
 		var employees = new List<Employee>();
-		foreach (var employee in _employees.Values)
+		foreach(var employee in _employees.Values)
 		{
 			employees.Add((Employee)employee);
 		}

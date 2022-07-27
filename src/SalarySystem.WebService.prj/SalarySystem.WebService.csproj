@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +17,12 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SalarySystem.BL.prj\SalarySystem.BL.csproj" />
+    <ProjectReference Include="..\SalarySystem.Database\SalarySystem.Database.csproj" />
+    <ProjectReference Include="..\SalarySystem.Entities\SalarySystem.Entities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -10,4 +10,7 @@ public class SalariedClassification : PaymentClassification
 	}
 
 	public override double CalculatePay(Paycheck paycheck) => Salary;
+
+	public override string ToString() => "Зарплата";
+
 }

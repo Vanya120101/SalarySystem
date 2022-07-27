@@ -27,4 +27,7 @@ public class CommissionedClassification : PaymentClassification
 
 		return totalPay;
 	}
+
+	public override string ToString() => "Комиссионная оплата";
+
 }

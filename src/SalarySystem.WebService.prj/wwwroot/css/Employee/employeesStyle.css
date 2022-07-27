@@ -1,0 +1,27 @@
+﻿main {
+    background-color: #f7f7f7;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+}
+
+    main table caption {
+        margin-bottom: 1%;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    main table thead {
+        vertical-align: top;
+    }
+
+    main table td {
+        padding: 15px 70px;
+        font-size: 2em;
+    }
+
+    main table th {
+        padding: 0 70px;
+        font-size: 2em;
+    }

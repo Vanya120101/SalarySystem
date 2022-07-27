@@ -1,48 +1,33 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using SalarySystem.Entities
+@model IEnumerable<Employee>
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<html>
+@section Head{
+<link href="~/css/Employee/employeesStyle.css" rel="stylesheet" />
 
-<head>
-    <meta charset="utf-8" />
-    <link href="~/css/Employee/style.css" rel="stylesheet" />
-    <title>Test</title>
-</head>
-<body>
-    <header>
-        <h1>Система начисления заработной платы</h1>
-        <ul class="nav">
-            <li><a href="#">Список сотрудников</a></li>
-            <li><a href="#">Список организаций</a></li>
-            <li><a href="#">Список транзакций</a></li>
-            <li><a href="#">Добавить транзакцию</a></li>
-        </ul>
-    </header>
-    <main>
-        <div>
-            <table>
-                <caption>Сотрудники</caption>
+}
+<main>
+    <div id="maindiv">
+        <table>
+            <caption>Сотрудники</caption>
+            <tr>
+                <th>Имя</th>
+                <th>Должность</th>
+                <th>Адрес</th>
+                <th>Подробнее</th>
+                <th></th>
+            </tr>
+            @foreach(var employee in Model)
+            {
                 <tr>
-                    <th>Имя</th>
-                    <th>Должность</th>
-                    <th>Заработок</th>
-                    <th>Подробнее</th>
-                    <th></th>
+                    <td>@employee.Name</td>
+                    <td>@employee.EmployeeInformation.Role</td>
+                    <td>@employee.Address</td>
+                    <td><a href="~/Employee/Employee?id=@employee.Id">..</a></td>
                 </tr>
-                <tr>
-                    <td>Имя</td>
-                    <td>Должность</td>
-                    <td>Способ начисления заработка</td>
-                    <td>+</td>
-                </tr>
-            </table>
-        </div>
-    </main>
-    <footer>
-        <h1>Данный проект - проект по начислению заработной платы, выполняемый по книжке М. Мартина "Принципы, паттерны и методики гибкой разработки на языке C#"</h1>
-    </footer>
-</body>
+            }
+        </table>
+    </div>
+</main>
 
-</html>

@@ -31,4 +31,7 @@ public class HourlyClassification : PaymentClassification
 		var normalHours = timeCard.Hours - overtimeHours;
 		return HourlyRate * normalHours + HourlyRate * 1.5 * overtimeHours;
 	}
+
+	public override string ToString() => "Почасовая оплата";
+
 }

@@ -5,4 +5,7 @@ public class DirectMethod : PaymentMethod
 	{
 
 	}
+
+	public override string ToString() => "Выплата осуществляется через банк";
+
 }

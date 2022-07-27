@@ -1,0 +1,29 @@
+﻿@using SalarySystem.Entities
+@model Employee
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+<link href="~/css/Employee/employeeStyle.css" rel="stylesheet" />
+}
+<main>
+    <div class="pageTitle">Сотрудник</div>
+    <img class="avatar"
+         src="https://static.wikia.nocookie.net/to-loveru/images/7/7c/Yami_prof.jpg/revision/latest/scale-to-width-down/250?cb=20131224204724" />
+    <div class="labelInformation">
+        <p>Имя:</p>
+        <p>Фамилия:</p>
+        <p>Должность:</p>
+        <p>Способ оплаты:</p>
+        <p>Время оплаты:</p>
+        <p>Классификация заработка: </p>
+    </div>
+    <div class="information">
+        <p>@Model.Name</p>
+        <p>SecondName</p>
+        <p>@Model.EmployeeInformation.Role</p>
+        <p>@Model.PaymentMethod</p>
+        <p>@Model.PaymentSchedule</p>
+        <p>@Model.PaymentClassification</p>
+    </div>
+</main>

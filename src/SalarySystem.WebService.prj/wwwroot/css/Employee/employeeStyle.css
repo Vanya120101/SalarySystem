@@ -1,0 +1,23 @@
+﻿.pageTitle{
+    text-align: center;
+    font-size: 2em;
+}
+
+.avatar{
+    margin-top: 5%;
+    float:left;
+}
+
+.labelInformation{
+    margin-top: 5%;
+    margin-left: 5%;
+    float: left;
+    font-size: 24px;
+}
+
+.information{
+    margin-top: 5%;
+    margin-left: 50%;
+    font-size: 24px;
+
+}

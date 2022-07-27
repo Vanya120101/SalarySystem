@@ -21,4 +21,5 @@ public class BiweeklySchedule : PaymentSchedule
 
 		return resultDate;
 	}
+	public override string ToString() => "Выплата осуществляется каждые 2 недели";
 }

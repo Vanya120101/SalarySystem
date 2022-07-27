@@ -35,12 +35,12 @@ public class Startup
 		app.UseStaticFiles();
 		app.UseRouting();
 
-		app.UseEndpoints(endpoints =>
-		{
-			endpoints.MapControllerRoute(
-				name: "default",
-				pattern: "{controller}/{action}");
-		});
-		//app.UseEndpoints(endpoints => endpoints.MapGet("/", async context => await context.Response.WriteAsync("Hello World!")));
-	}
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllerRoute(
+                name: "default",
+                pattern: "{controller}/{action}");
+        });
+        //app.UseEndpoints(endpoints => endpoints.MapGet("/", async context => await context.Response.WriteAsync("Hello World!")));
+    }
 }
