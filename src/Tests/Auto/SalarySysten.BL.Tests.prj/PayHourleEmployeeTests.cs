@@ -11,7 +11,7 @@ internal class PayHourleEmployeeTests
 	{
 		//Arrange
 		var employeeId = 123;
-		var addEmployeeTransactions = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
+		var addEmployeeTransactions = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
 		addEmployeeTransactions.Execute();
 
 		var payDate = new DateTime(2001, 11, 9);
@@ -29,7 +29,7 @@ internal class PayHourleEmployeeTests
 	{
 		//Arrange
 		var employeeId = 124;
-		var addEmployeeTransactions = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
+		var addEmployeeTransactions = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
 		addEmployeeTransactions.Execute();
 
 		var payDate = new DateTime(2001, 11, 9);
@@ -50,7 +50,7 @@ internal class PayHourleEmployeeTests
 	{
 		//Arrange
 		var employeeId = 126;
-		var addEmployeeTransactions = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
+		var addEmployeeTransactions = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
 		addEmployeeTransactions.Execute();
 
 		var payDate = new DateTime(2001, 11, 9);
@@ -71,7 +71,7 @@ internal class PayHourleEmployeeTests
 	{
 		//Arrange
 		var employeeId = 127;
-		var addEmployeeTransactions = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
+		var addEmployeeTransactions = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
 		addEmployeeTransactions.Execute();
 
 		var payDate = new DateTime(2001, 11, 8);
@@ -93,7 +93,7 @@ internal class PayHourleEmployeeTests
 	{
 		//Arrange
 		var employeeId = 128;
-		var addEmployeeTransactions = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
+		var addEmployeeTransactions = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
 		addEmployeeTransactions.Execute();
 
 		var payDate = new DateTime(2001, 11, 9);
@@ -116,7 +116,7 @@ internal class PayHourleEmployeeTests
 	{
 		//Arrange
 		var employeeId = 129;
-		var addEmployeeTransactions = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
+		var addEmployeeTransactions = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 150.00);
 		addEmployeeTransactions.Execute();
 
 		var payDate = new DateTime(2001, 11, 9);

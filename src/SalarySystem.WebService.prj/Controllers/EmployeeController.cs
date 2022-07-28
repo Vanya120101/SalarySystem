@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SalarySystem.BL;
 using SalarySystem.Database;
+using System;
 
 namespace SalarySystem.WebService.Controllers;
 
@@ -26,47 +28,68 @@ public class EmployeeController : Controller
 		return View(employee);
 	}
 
-	/// <summary>Add employee.</summary>
+	/// <summary>Add salaried employee.</summary>
 	/// <param name="employeeDTO">Employee DTO.</param>
-	/// <returns>Operation success.</returns>
+	/// <returns>View adding salaried employee.</returns>
 	[HttpPost]
-	public IActionResult AddEmployee([FromForm]EmployeeDTO employeeDTO)
+	public IActionResult AddSalariedEmployee([FromForm] SalariedEmployeeDTO employeeDTO)
 	{
-		var test = employeeDTO.Address;
-		return View("~/Views/Transaction/AddingEmployee.cshtml");
+		var addEmployeeTransaction = new AddSalariedEmployeeTransaction(GetRandomID(), employeeDTO.Name, employeeDTO.Address, employeeDTO.Salary);
+		addEmployeeTransaction.Execute();
+		return View("~/Views/Transaction/AddingSalariedEmployee.cshtml");
+	}
+
+	/// <summary>Add hourly employee.</summary>
+	/// <param name="employeeDTO">Employee DTO.</param>
+	/// <returns>View adding hourly employee.</returns>
+	[HttpPost]
+	public IActionResult AddHourlyEmployee([FromForm]HourlyEmployeeDTO employeeDTO)
+	{
+		var addEmployeeTransaction = new AddHourlyEmployeeTransaction(GetRandomID(), employeeDTO.Name, employeeDTO.Address, employeeDTO.HourlyRate);
+		addEmployeeTransaction.Execute();
+		return View("~/Views/Transaction/AddingHourlyEmployee.cshtml");
+	}
+
+	/// <summary>Add commissioned employee.</summary>
+	/// <param name="employeeDTO">Employee DTO.</param>
+	/// <returns>View adding commissioned employee.</returns>
+	[HttpPost]
+	public IActionResult AddCommissionedEmployee([FromForm]CommissionedEmployeeDTO employeeDTO)
+	{
+		var addEmployeeTransaction = new AddCommissionedEmployeeTransaction(GetRandomID(), employeeDTO.Name, employeeDTO.Address, employeeDTO.Salary, employeeDTO.CommissionRate);
+		addEmployeeTransaction.Execute();
+		return View("~/Views/Transaction/AddingCommissionedEmployee.cshtml");
+	}
+
+	private static int GetRandomID()
+	{
+		var rnd = new Random();
+		return rnd.Next(0, int.MaxValue);
 	}
 }
 
-public record EmployeeDTO
+public abstract record SalariedDTO
 {
-	public string FirstName { get; init; }
+	public string Name { get; init; }
 
-	public string SecondName { get; init; }
-	public string Role { get; init; }
 	public string Address { get; init; }
-	public PaymentClassification PaymentClassification { get; init; }
-	public PaymentMethods PaymentMethod { get; init; }
-	public PaymentSchedule PaymentSchedule { get; init; }
-
 }
 
-public enum PaymentClassification
+public record SalariedEmployeeDTO : SalariedDTO
 {
-	Commissioned,
-	Hourly,
-	Salaried
+	public int Salary { get; init; }
 }
 
-public enum PaymentMethods
+public record HourlyEmployeeDTO : SalariedDTO
 {
-	Direct,
-	Hold,
-	Mail
+	public int HourlyRate { get; init; }
 }
 
-public enum PaymentSchedule
+public record CommissionedEmployeeDTO : SalariedDTO
 {
-	Biweekly,
-	Monthly,
-	Weekly
+	public int Salary { get; init; }
+	public int CommissionRate { get; init; }
 }
+
+
+

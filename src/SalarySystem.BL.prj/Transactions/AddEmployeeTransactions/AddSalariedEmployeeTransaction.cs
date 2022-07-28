@@ -1,4 +1,5 @@
 ﻿using SalarySystem.Entities;
+using System;
 
 namespace SalarySystem.BL;
 

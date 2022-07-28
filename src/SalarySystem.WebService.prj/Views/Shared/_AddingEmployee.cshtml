@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+<link href="~/css/Transaction/addingEmployeeStyle.css" rel="stylesheet" />
+}
+
+<ul class="transactionNav">
+    <li><a href="~/Transaction/AddSalariedEmployee">Добавить сотрудника на полную ставку</a></li>
+    <li><a href="~/Transaction/AddCommissionedEmployee">Добавить сотрудника на комиссионную оплату</a></li>
+    <li><a href="~/Transaction/AddHourlyEmployee">Добавить сотрудника на почасовую оплату</a></li>
+</ul>
+
+<div class="addingEmployeeForm">
+    <h1 class="pageTitle">@ViewData["EmployeeTitle"]</h1>
+    <form method="post" action="/Employee/AddSalariedEmployee" enctype="application/x-www-form-urlencoded">
+        <div class="labelInformation">
+
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name"/>
+
+            <label for="address">Адрес:</label>
+            <input type="text" id="address" name="address"/>
+
+            @RenderSection("EmployeeInformation", true)
+        </div>
+
+    </form>
+    <div class="information">
+
+    </div>
+</div>

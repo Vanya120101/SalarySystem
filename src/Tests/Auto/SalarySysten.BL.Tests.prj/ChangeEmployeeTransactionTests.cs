@@ -11,7 +11,7 @@ internal class ChangeEmployeeTransactionTests
 	{
 		//Arrange
 		var employeeId = 2;
-		var addHourlyemployeeTransaction = new AddHorlyEmployeeTransaction(employeeId, "Vaya", "Lenina", 15.00);
+		var addHourlyemployeeTransaction = new AddHourlyEmployeeTransaction(employeeId, "Vaya", "Lenina", 15.00);
 		addHourlyemployeeTransaction.Execute();
 
 		var changeNameTransaction = new ChangeNameTransaction(employeeId, "Bob");
@@ -29,7 +29,7 @@ internal class ChangeEmployeeTransactionTests
 	{
 		//Arrange
 		var employeeId = 2;
-		var addHourlyemployeeTransaction = new AddHorlyEmployeeTransaction(employeeId, "Vaya", "Lenina", 15.00);
+		var addHourlyemployeeTransaction = new AddHourlyEmployeeTransaction(employeeId, "Vaya", "Lenina", 15.00);
 		addHourlyemployeeTransaction.Execute();
 
 		var changeTransaction = new ChangeAddressTransaction(employeeId, "Mars");

@@ -13,7 +13,7 @@ internal class PaymentItemsTests
 	{
 		//Arrange
 		var employeeId = 5;
-		var addEmployeeTransaction = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 15.00);
+		var addEmployeeTransaction = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 15.00);
 		addEmployeeTransaction.Execute();
 
 		var timeCardTransactoin = new TimeCardTransaction(new DateTime(2005, 7, 31), 8.0, employeeId);

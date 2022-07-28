@@ -2,11 +2,11 @@
 
 namespace SalarySystem.BL;
 
-public class AddHorlyEmployeeTransaction : AddEmployeeTransaction
+public class AddHourlyEmployeeTransaction : AddEmployeeTransaction
 {
 	private readonly double _hourlyRate;
 
-	public AddHorlyEmployeeTransaction(int employeeId, string name, string address, double hourlyRate) : base(employeeId, name, address)
+	public AddHourlyEmployeeTransaction(int employeeId, string name, string address, double hourlyRate) : base(employeeId, name, address)
 	{
 		_hourlyRate = hourlyRate;
 	}

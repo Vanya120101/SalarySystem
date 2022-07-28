@@ -13,7 +13,7 @@ internal class ServiceChargeTests
 	{
 		//Arrange
 		var employeeId = 2;
-		var addHourlyEmployeeTransaction = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 15.00);
+		var addHourlyEmployeeTransaction = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 15.00);
 		addHourlyEmployeeTransaction.Execute();
 		var employee = PayrollDatabase.GetEmployee(employeeId);
 

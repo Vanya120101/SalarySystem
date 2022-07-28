@@ -7,9 +7,9 @@
 
     ul.transactionNav a {
         display: block;
-        width: 7em;
+        width: 10em;
         padding: 10px;
-        font-size: 2em;
+        font-size: 1em;
         background-color: #eee;
         border-top: 1px solid #ccc;
         border-right: 1px solid #ccc;

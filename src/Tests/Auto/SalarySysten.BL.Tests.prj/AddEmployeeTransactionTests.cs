@@ -39,7 +39,7 @@ internal class AddEmployeeTransactionTests
 	{
 		//Arrange
 		var employeeId = 1;
-		var addEmployeeTransaction = new AddHorlyEmployeeTransaction(employeeId, "Bob", "Home", 15.00);
+		var addEmployeeTransaction = new AddHourlyEmployeeTransaction(employeeId, "Bob", "Home", 15.00);
 
 		//Act
 		addEmployeeTransaction.Execute();

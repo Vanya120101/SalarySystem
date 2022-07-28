@@ -38,7 +38,7 @@ internal class AffilicationPaydayTransactionTests
 	{
 		//Arrange
 		var employeeId = 701;
-		var addEmployeeTransaction = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 1500.00);
+		var addEmployeeTransaction = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 1500.00);
 		addEmployeeTransaction.Execute();
 
 		var memberId = 7414;
@@ -71,7 +71,7 @@ internal class AffilicationPaydayTransactionTests
 	{
 		//Arrange
 		var employeeId = 703;
-		var addEmployeeTransaction = new AddHorlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 1500.00);
+		var addEmployeeTransaction = new AddHourlyEmployeeTransaction(employeeId, "Vanya", "Lenina", 1500.00);
 		addEmployeeTransaction.Execute();
 
 		var memberId = 7414;

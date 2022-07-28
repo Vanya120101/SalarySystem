@@ -13,7 +13,6 @@ public class Employee
 		PaymentClassification = paymentClassification ?? throw new System.ArgumentNullException(nameof(paymentClassification));
 		PaymentSchedule       = paymentSchedule ?? throw new System.ArgumentNullException(nameof(paymentSchedule));
 		PaymentMethod         = paymentMethod ?? throw new System.ArgumentNullException(nameof(paymentMethod));
-		EmployeeInformation   = new EmployeeInformation();
 	}
 
 	public void PayDay(Paycheck paycheck)
@@ -29,7 +28,6 @@ public class Employee
 	public int Id { get; }
 	public string Name { get; set; }
 	public string Address { get; set; }
-	public EmployeeInformation EmployeeInformation { get; private set; }
 	public PaymentClassification PaymentClassification { get; set; }
 	public PaymentSchedule PaymentSchedule { get; set; }
 	public PaymentMethod PaymentMethod { get; set; }
