@@ -6,17 +6,20 @@
 <head>
     <meta charset="utf-8" />
     <link href="~/css/Employee/mainStyle.css" rel="stylesheet" />
-    @RenderSection("Head")
+    @if(IsSectionDefined("Head"))
+    {
+        @RenderSection("Head")
+    }
     <title>Test</title>
 </head>
 <body>
     <header>
         <h1>Система начисления заработной платы</h1>
         <ul class="nav">
-            <li><a href="#">Список сотрудников</a></li>
+            <li><a href="~/Employee/Employees">Список сотрудников</a></li>
             <li><a href="#">Список организаций</a></li>
             <li><a href="#">Список транзакций</a></li>
-            <li><a href="#">Добавить транзакцию</a></li>
+            <li><a href="~/Transaction/AddingEmployee">Добавить транзакцию</a></li>
         </ul>
     </header>
     <main>

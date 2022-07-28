@@ -25,4 +25,48 @@ public class EmployeeController : Controller
 		var employee = PayrollDatabase.GetEmployee(id);
 		return View(employee);
 	}
+
+	/// <summary>Add employee.</summary>
+	/// <param name="employeeDTO">Employee DTO.</param>
+	/// <returns>Operation success.</returns>
+	[HttpPost]
+	public IActionResult AddEmployee([FromForm]EmployeeDTO employeeDTO)
+	{
+		var test = employeeDTO.Address;
+		return View("~/Views/Transaction/AddingEmployee.cshtml");
+	}
+}
+
+public record EmployeeDTO
+{
+	public string FirstName { get; init; }
+
+	public string SecondName { get; init; }
+	public string Role { get; init; }
+	public string Address { get; init; }
+	public PaymentClassification PaymentClassification { get; init; }
+	public PaymentMethods PaymentMethod { get; init; }
+	public PaymentSchedule PaymentSchedule { get; init; }
+
+}
+
+public enum PaymentClassification
+{
+	Commissioned,
+	Hourly,
+	Salaried
+}
+
+public enum PaymentMethods
+{
+	Direct,
+	Hold,
+	Mail
+}
+
+public enum PaymentSchedule
+{
+	Biweekly,
+	Monthly,
+	Weekly
 }

@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+<link href="~/css/Transaction/addingEmployeeStyle.css" rel="stylesheet" />
+}
+
+<ul class="transactionNav">
+    <li><a href="#">Добавить сотрудника</a></li>
+    <li><a href="#">Изменить сотрудника</a></li>
+</ul>
+
+<div class="addingEmployeeForm">
+    <h1 class="pageTitle">Добавить сотрудника</h1>
+    <form method="post" action="/Employee/AddEmployee" enctype="application/x-www-form-urlencoded">
+        <div class="labelInformation">
+
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name"/>
+
+            <label for="secondName">Фамилия:</label>
+            <input type="text" id="secondName" name="secondName"/>
+
+            <label for="role">Должность:</label>
+            <input type="text" id="role" name="role"/>
+
+            <label for="Address">Адрес:</label>
+            <input type="text" id="Address" name="Address"/>
+
+            <label for="paymentClassification">Классификация выплат: </label>
+            <select name="paymentClassification" id="paymentClassification">
+                <option>Commissioned</option>
+                <option>Hourly</option>
+                <option>Salaried</option>
+            </select>
+
+
+            <label for="paymentMethod">Способ выплат:</label>
+            <select name="paymentMethod" id="paymentMethod">
+                <option>Direct</option>
+                <option>Hold</option>
+                <option>Mail</option>
+            </select>
+
+            <label for="paymentSchedule">Расписание выплат:</label>
+            <select name="paymentSchedule" id="paymentSchedule">
+                <option>Biweekly</option>
+                <option>Monthly</option>
+                <option>Weekly</option>
+            </select>
+
+            <input type="submit" value="Добавить фотографию"/>
+
+            <input type="submit" value="Добавить сотрудника"/>
+        </div>
+
+    </form>
+    <div class="information">
+
+    </div>
+</div>
