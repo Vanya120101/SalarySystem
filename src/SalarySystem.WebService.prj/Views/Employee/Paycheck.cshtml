@@ -1,5 +1,6 @@
 ﻿@using SalarySystem.Entities
-@model Employee
+@using SalarySystem.WebService.Models
+@model EmployeePaycheck
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -17,13 +18,15 @@
         <p>Способ оплаты:</p>
         <p>Время оплаты:</p>
         <p>Классификация заработка: </p>
+        <p>Зарплата: </p>
     </div>
     <div class="information">
-        <p>@Model.Id</p>
-        <p>@Model.Name</p>
-        <p>@Model.Address</p>
-        <p>@Model.PaymentMethod</p>
-        <p>@Model.PaymentSchedule</p>
-        <p>@Model.PaymentClassification</p>
+        <p>@Model.Employee.Id</p>
+        <p>@Model.Employee.Name</p>
+        <p>@Model.Employee.Address</p>
+        <p>@Model.Employee.PaymentMethod</p>
+        <p>@Model.Employee.PaymentSchedule</p>
+        <p>@Model.Employee.PaymentClassification</p>
+        <p>@Model.Salary</p>
     </div>
 </main>

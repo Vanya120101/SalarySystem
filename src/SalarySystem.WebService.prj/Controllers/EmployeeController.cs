@@ -61,6 +61,17 @@ public class EmployeeController : Controller
 		return View("~/Views/Transaction/AddingCommissionedEmployee.cshtml");
 	}
 
+	/// <summary>Delete employee with specified id.</summary>
+	/// <param name="id">Employee id.</param>
+	/// <returns>Deleting employee view.</returns>
+	[HttpPost]
+	public IActionResult DeleteEmployee([FromForm]int id)
+	{
+		var deleteEmployeeTransaction = new DeleteEmployeeTransaction(id);
+		deleteEmployeeTransaction.Execute();
+		return View("~/Views/Transaction/DeletingEmployee.cshtml");
+	}
+
 	private static int GetRandomID()
 	{
 		var rnd = new Random();

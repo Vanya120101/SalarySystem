@@ -1,15 +1,8 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-@section Head{
-<link href="~/css/Transaction/addingEmployeeStyle.css" rel="stylesheet" />
+    Layout = "~/Views/Shared/_AddingTransaction.cshtml";
 }
 
-<ul class="transactionNav">
-    <li><a href="~/Transaction/AddSalariedEmployee">Добавить сотрудника на полную ставку</a></li>
-    <li><a href="~/Transaction/AddCommissionedEmployee">Добавить сотрудника на комиссионную оплату</a></li>
-    <li><a href="~/Transaction/AddHourlyEmployee">Добавить сотрудника на почасовую оплату</a></li>
-</ul>
+@section Transaction{
 
 <div class="addingEmployeeForm">
     <h1 class="pageTitle">@ViewData["EmployeeTitle"]</h1>
@@ -30,3 +23,4 @@
 
     </div>
 </div>
+}

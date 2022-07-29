@@ -1,0 +1,25 @@
+﻿@{    Layout = "~/Views/Shared/_AddingTransaction.cshtml";
+
+    ViewData["EmployeeTitle"] = "Расчет запрлаты";
+    Layout = "~/Views/Shared/_AddingTransaction.cshtml";
+}
+
+@section Transaction{
+
+<div class="deleteEmployeeForm">
+    <h1 class="pageTitle">@ViewData["EmployeeTitle"]</h1>
+    <form>
+        <div class="labelInformation">
+            <p>
+                <label for="id">Id сотрудника: </label>
+                <input type="number" id="id" name="id"/>
+
+                <label for="currentDate">Дата для расчета: </label>
+                <input type="date" id="currentDate" name="currentDate"/>
+
+                <input type="submit" value="Высчитать зарплату" formmethod="get" formaction="/Salary/CalculateSalary" formenctype="application/x-www-form-urlencoded"/>
+            </p>
+        </div>
+    </form>
+</div>
+}

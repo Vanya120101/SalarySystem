@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+<link href="~/css/Transaction/addingEmployeeStyle.css" rel="stylesheet" />
+}
+
+<ul class="transactionNav">
+    <li><a href="~/Transaction/AddSalariedEmployee">Добавить сотрудника на полную ставку</a></li>
+    <li><a href="~/Transaction/AddCommissionedEmployee">Добавить сотрудника на комиссионную оплату</a></li>
+    <li><a href="~/Transaction/AddHourlyEmployee">Добавить сотрудника на почасовую оплату</a></li>
+    <li><a href="~/Transaction/DeleteEmployee">Удалить сотрудника</a></li>
+    <li><a href="~/Transaction/CalculateSalary">Посчитать зарплату сотрудника</a></li>
+</ul>
+
+@RenderSection("Transaction", true)

@@ -1,0 +1,22 @@
+﻿@{    Layout = "~/Views/Shared/_AddingTransaction.cshtml";
+
+    ViewData["EmployeeTitle"] = "Удалить работника";
+    Layout = "~/Views/Shared/_AddingTransaction.cshtml";
+}
+
+@section Transaction{
+
+<div class="deleteEmployeeForm">
+    <h1 class="pageTitle">@ViewData["EmployeeTitle"]</h1>
+    <form>
+        <div class="labelInformation">
+            <p>
+                <label for="id">Id сотрудника: </label>
+                <input type="number" id="id" name="id"/>
+
+                <input type="submit" value="Удалить сотрудника" formmethod="post" formaction="/Employee/DeleteEmployee" formenctype="application/x-www-form-urlencoded"/>
+            </p>
+        </div>
+    </form>
+</div>
+}
